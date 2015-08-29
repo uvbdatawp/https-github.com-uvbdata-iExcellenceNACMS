@@ -68,6 +68,7 @@ namespace WindowsFormsApplication1
                 foreach (var listItemParseObject in result)
                 {
                     var listItem = await MagicList.CreateFromParseObject(listItemParseObject);
+
                     listItems.Add(listItem);
                 }
                 

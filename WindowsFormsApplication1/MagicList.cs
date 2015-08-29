@@ -16,62 +16,28 @@ public class MagicList : INotifyPropertyChanged
     {
 
     }
-    public MagicList(String uniqueId, String title, String subtitle, String imagePath, String description, String content, string type)
+    public MagicList(String countryname, String countrydescription)
     {
-        this.UniqueId = uniqueId;
-        this.Title = title;
-        this.Subtitle = subtitle;
-        this.Description = description;
-        this.ImagePath = imagePath;
-        this.Content = content;
-        this.Type = type;
-    }
+        this.CountryName = countryname;
+        this.CountryDescription = countrydescription;
+     }
 
 
-    public MagicList(String uniqueId, String title, String subtitle, String imagePath, String description, String content, bool unread, Int32 status)
-    {
-        UniqueId = uniqueId;
-        Title = title;
-        Subtitle = subtitle;
-        Description = description;
-        ImagePath = imagePath;
-        Content = content;
-        Unread = unread;
-        Status = status;
-    }
+    
+    //private bool _unread;
 
-
-    private bool _unread;
-
-    private string _title;
-    public string UniqueId { get; private set; }
-    public string Title
-    {
-        get { return _title; }
-
-        set
+    private string _countryname;
+    public string CountryName
         {
-            _title = value;
-            NotifyPropertyChanged("Title");
-        }
-    }
-    public string Subtitle { get; private set; }
-    public string Description { get; private set; }
-    public string ImagePath { get; private set; }
-    public string Content { get; private set; }
-    public int Status { get; private set; }
-    public string Type { get; private set; }
+            get { return _countryname; }
 
-    public string ViewToUse { get; private set; }
-    public bool Unread
-    {
-        get { return _unread; }
-        set
-        {
-            _unread = value;
-            NotifyPropertyChanged("Unread");
+            set
+            {
+                _countryname = value;
+                NotifyPropertyChanged("CountryName");
+            }
         }
-    }
+    public string CountryDescription { get; private set; }
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -89,33 +55,16 @@ public class MagicList : INotifyPropertyChanged
         {
             var mlist = new MagicList();
 
-            mlist.Title = parseObject.ObjectId;
+            mlist.CountryName = parseObject.ObjectId;
+            if (parseObject.ContainsKey("languageID"))
+            {
+                mlist.CountryName = (string)parseObject["languageID"];
+            }
+
+
             if (parseObject.ContainsKey("name"))
             {
-                mlist.Title = (string)parseObject["name"];
-            }
-
-
-            if (parseObject.ContainsKey("description"))
-            {
-                mlist.Description = (string)parseObject["description"];
-            }
-            if (parseObject.ContainsKey("image"))
-            {
-                mlist.ImagePath = (string)parseObject["image"];
-            }
-
-
-            if (parseObject.ContainsKey("type"))
-            {
-                string mtype = (string)parseObject["type"];
-
-                if (mtype == "N")
-
-                {
-                    mlist.Type = "Notes";
-                    mlist.ViewToUse = "Notes.Xaml";
-                }
+                mlist.CountryDescription = (string)parseObject["name"];
             }
             return mlist;
         });
