@@ -69,17 +69,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MagicList.cs" />
-    <Compile Include="NAC-COUNTRY.cs">
+    <Compile Include="FormAppInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NAC-COUNTRY.Designer.cs">
-      <DependentUpon>NAC-COUNTRY.cs</DependentUpon>
+    <Compile Include="FormAppInfo.Designer.cs">
+      <DependentUpon>FormAppInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUserSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserSettings.Designer.cs">
+      <DependentUpon>FormUserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagicList.cs" />
+    <Compile Include="NACMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NACMS.Designer.cs">
+      <DependentUpon>NACMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NACMS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NACMS.resx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NAC-COUNTRY.resx">
-      <DependentUpon>NAC-COUNTRY.cs</DependentUpon>
+    <EmbeddedResource Include="FormAppInfo.resx">
+      <DependentUpon>FormAppInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserSettings.resx">
+      <DependentUpon>FormUserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NACMS.resx">
+      <DependentUpon>NACMS.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NACMS1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,6 +116,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
