@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
             public MagicListHotline()
             {
             }
-
+            // TEst
             public MagicListHotline(String hotlinelanguage, String hotlinephone, String hotlineemail, String hotlinefax)
             {
                 this.HotlineLanguage = hotlinelanguage;
