@@ -45,15 +45,27 @@
             this.btnRefreshHotline = new System.Windows.Forms.Button();
             this.btnSaveHotline = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.hotlineFax = new System.Windows.Forms.TextBox();
             this.hotlineEmail = new System.Windows.Forms.TextBox();
             this.hotlinePhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.languageComboBoxHotline = new System.Windows.Forms.ComboBox();
+            this.tabPageBrand = new System.Windows.Forms.TabPage();
+            this.BrandBtnSave = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.branddescription = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.brandImage = new System.Windows.Forms.PictureBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.brandSortRank = new System.Windows.Forms.TextBox();
+            this.brandname = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.BrandComboBoxHotline = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,12 +76,23 @@
             this.toolStripProgressBarBackend = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusDateTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.tabPageType = new System.Windows.Forms.TabPage();
+            this.tabPageProduct = new System.Windows.Forms.TabPage();
+            this.tabPageDealer = new System.Windows.Forms.TabPage();
+            this.tabPageECommerce = new System.Windows.Forms.TabPage();
+            this.tabPageNews = new System.Windows.Forms.TabPage();
+            this.tabPageVideo = new System.Windows.Forms.TabPage();
+            this.tabPageTeaser = new System.Windows.Forms.TabPage();
             this.AppTab.SuspendLayout();
             this.tabPageCountry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStripItemDelete.SuspendLayout();
             this.tabPageHotline.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPageBrand.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brandImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +101,14 @@
             // 
             this.AppTab.Controls.Add(this.tabPageCountry);
             this.AppTab.Controls.Add(this.tabPageHotline);
+            this.AppTab.Controls.Add(this.tabPageBrand);
+            this.AppTab.Controls.Add(this.tabPageType);
+            this.AppTab.Controls.Add(this.tabPageProduct);
+            this.AppTab.Controls.Add(this.tabPageDealer);
+            this.AppTab.Controls.Add(this.tabPageECommerce);
+            this.AppTab.Controls.Add(this.tabPageNews);
+            this.AppTab.Controls.Add(this.tabPageVideo);
+            this.AppTab.Controls.Add(this.tabPageTeaser);
             this.AppTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AppTab.Location = new System.Drawing.Point(12, 121);
             this.AppTab.Name = "AppTab";
@@ -107,7 +138,7 @@
             // 
             // btnRefreshCountry
             // 
-            this.btnRefreshCountry.Location = new System.Drawing.Point(1027, 178);
+            this.btnRefreshCountry.Location = new System.Drawing.Point(1027, 161);
             this.btnRefreshCountry.Name = "btnRefreshCountry";
             this.btnRefreshCountry.Size = new System.Drawing.Size(151, 52);
             this.btnRefreshCountry.TabIndex = 13;
@@ -131,10 +162,11 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.contextMenuStripItemDelete;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 236);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 229);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1355, 494);
+            this.dataGridView1.Size = new System.Drawing.Size(1355, 501);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // contextMenuStripItemDelete
             // 
@@ -152,15 +184,15 @@
             // 
             // countryDescription
             // 
-            this.countryDescription.Location = new System.Drawing.Point(448, 129);
+            this.countryDescription.Location = new System.Drawing.Point(217, 129);
             this.countryDescription.Name = "countryDescription";
-            this.countryDescription.Size = new System.Drawing.Size(902, 26);
+            this.countryDescription.Size = new System.Drawing.Size(1133, 26);
             this.countryDescription.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(250, 129);
+            this.label1.Location = new System.Drawing.Point(213, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 20);
             this.label1.TabIndex = 9;
@@ -168,7 +200,7 @@
             // 
             // btnSaveCountry
             // 
-            this.btnSaveCountry.Location = new System.Drawing.Point(1199, 178);
+            this.btnSaveCountry.Location = new System.Drawing.Point(1199, 161);
             this.btnSaveCountry.Name = "btnSaveCountry";
             this.btnSaveCountry.Size = new System.Drawing.Size(151, 52);
             this.btnSaveCountry.TabIndex = 8;
@@ -180,18 +212,17 @@
             // 
             this.countryName.Location = new System.Drawing.Point(26, 129);
             this.countryName.Name = "countryName";
-            this.countryName.Size = new System.Drawing.Size(145, 26);
+            this.countryName.Size = new System.Drawing.Size(185, 26);
             this.countryName.TabIndex = 7;
-            this.countryName.TextChanged += new System.EventHandler(this.countryName_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.Size = new System.Drawing.Size(110, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Country Shortname";
+            this.label2.Text = "Countrycode";
             // 
             // tabPageHotline
             // 
@@ -199,9 +230,7 @@
             this.tabPageHotline.Controls.Add(this.btnRefreshHotline);
             this.tabPageHotline.Controls.Add(this.btnSaveHotline);
             this.tabPageHotline.Controls.Add(this.dataGridView2);
-            this.tabPageHotline.Controls.Add(this.label7);
             this.tabPageHotline.Controls.Add(this.label6);
-            this.tabPageHotline.Controls.Add(this.hotlineFax);
             this.tabPageHotline.Controls.Add(this.hotlineEmail);
             this.tabPageHotline.Controls.Add(this.hotlinePhone);
             this.tabPageHotline.Controls.Add(this.label5);
@@ -223,6 +252,7 @@
             this.btnRefreshHotline.TabIndex = 12;
             this.btnRefreshHotline.Text = "Refresh";
             this.btnRefreshHotline.UseVisualStyleBackColor = true;
+            this.btnRefreshHotline.Click += new System.EventHandler(this.btnRefreshHotline_Click_1);
             // 
             // btnSaveHotline
             // 
@@ -244,16 +274,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(1355, 390);
             this.dataGridView2.TabIndex = 10;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(340, 220);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Fax";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -263,14 +283,6 @@
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "eMail";
-            // 
-            // hotlineFax
-            // 
-            this.hotlineFax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotlineFax.Location = new System.Drawing.Point(487, 217);
-            this.hotlineFax.Name = "hotlineFax";
-            this.hotlineFax.Size = new System.Drawing.Size(852, 26);
-            this.hotlineFax.TabIndex = 7;
             // 
             // hotlineEmail
             // 
@@ -304,9 +316,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(26, 95);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.Size = new System.Drawing.Size(110, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Country";
+            this.label4.Text = "Countrycode";
             // 
             // label3
             // 
@@ -326,6 +338,157 @@
             this.languageComboBoxHotline.Name = "languageComboBoxHotline";
             this.languageComboBoxHotline.Size = new System.Drawing.Size(288, 28);
             this.languageComboBoxHotline.TabIndex = 1;
+            // 
+            // tabPageBrand
+            // 
+            this.tabPageBrand.BackColor = System.Drawing.Color.Moccasin;
+            this.tabPageBrand.Controls.Add(this.BrandBtnSave);
+            this.tabPageBrand.Controls.Add(this.label13);
+            this.tabPageBrand.Controls.Add(this.branddescription);
+            this.tabPageBrand.Controls.Add(this.label12);
+            this.tabPageBrand.Controls.Add(this.brandImage);
+            this.tabPageBrand.Controls.Add(this.dataGridView3);
+            this.tabPageBrand.Controls.Add(this.label10);
+            this.tabPageBrand.Controls.Add(this.brandSortRank);
+            this.tabPageBrand.Controls.Add(this.brandname);
+            this.tabPageBrand.Controls.Add(this.label11);
+            this.tabPageBrand.Controls.Add(this.label7);
+            this.tabPageBrand.Controls.Add(this.label9);
+            this.tabPageBrand.Controls.Add(this.BrandComboBoxHotline);
+            this.tabPageBrand.Location = new System.Drawing.Point(4, 29);
+            this.tabPageBrand.Name = "tabPageBrand";
+            this.tabPageBrand.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageBrand.TabIndex = 2;
+            this.tabPageBrand.Text = "Brand";
+            this.tabPageBrand.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // BrandBtnSave
+            // 
+            this.BrandBtnSave.Location = new System.Drawing.Point(1191, 635);
+            this.BrandBtnSave.Name = "BrandBtnSave";
+            this.BrandBtnSave.Size = new System.Drawing.Size(148, 40);
+            this.BrandBtnSave.TabIndex = 20;
+            this.BrandBtnSave.Text = "Save";
+            this.BrandBtnSave.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(339, 155);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(100, 20);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Description";
+            // 
+            // branddescription
+            // 
+            this.branddescription.Location = new System.Drawing.Point(333, 178);
+            this.branddescription.Multiline = true;
+            this.branddescription.Name = "branddescription";
+            this.branddescription.Size = new System.Drawing.Size(1006, 92);
+            this.branddescription.TabIndex = 18;
+            this.branddescription.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(22, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 20);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "Image";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // brandImage
+            // 
+            this.brandImage.Location = new System.Drawing.Point(26, 178);
+            this.brandImage.Name = "brandImage";
+            this.brandImage.Size = new System.Drawing.Size(288, 92);
+            this.brandImage.TabIndex = 16;
+            this.brandImage.TabStop = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToOrderColumns = true;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(26, 276);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(1313, 353);
+            this.dataGridView3.TabIndex = 15;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(1196, 84);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 20);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Sort Rank";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // brandSortRank
+            // 
+            this.brandSortRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandSortRank.Location = new System.Drawing.Point(1191, 119);
+            this.brandSortRank.Name = "brandSortRank";
+            this.brandSortRank.Size = new System.Drawing.Size(148, 26);
+            this.brandSortRank.TabIndex = 13;
+            this.brandSortRank.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // brandname
+            // 
+            this.brandname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandname.Location = new System.Drawing.Point(333, 119);
+            this.brandname.Name = "brandname";
+            this.brandname.Size = new System.Drawing.Size(852, 26);
+            this.brandname.TabIndex = 12;
+            this.brandname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(339, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(101, 20);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Brandname";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Countrycode";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 42);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Brand";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // BrandComboBoxHotline
+            // 
+            this.BrandComboBoxHotline.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BrandComboBoxHotline.FormattingEnabled = true;
+            this.BrandComboBoxHotline.Location = new System.Drawing.Point(26, 117);
+            this.BrandComboBoxHotline.Name = "BrandComboBoxHotline";
+            this.BrandComboBoxHotline.Size = new System.Drawing.Size(288, 28);
+            this.BrandComboBoxHotline.TabIndex = 4;
             // 
             // menuStrip1
             // 
@@ -365,7 +528,7 @@
             // versionInfoToolStripMenuItem
             // 
             this.versionInfoToolStripMenuItem.Name = "versionInfoToolStripMenuItem";
-            this.versionInfoToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.versionInfoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.versionInfoToolStripMenuItem.Text = "Version Info";
             this.versionInfoToolStripMenuItem.Click += new System.EventHandler(this.versionInfoToolStripMenuItem_Click);
             // 
@@ -406,6 +569,73 @@
             this.toolStripStatusDateTime.Size = new System.Drawing.Size(84, 17);
             this.toolStripStatusDateTime.Text = "Date and Time";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // tabPageType
+            // 
+            this.tabPageType.Location = new System.Drawing.Point(4, 29);
+            this.tabPageType.Name = "tabPageType";
+            this.tabPageType.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageType.TabIndex = 3;
+            this.tabPageType.Text = "Type";
+            this.tabPageType.UseVisualStyleBackColor = true;
+            // 
+            // tabPageProduct
+            // 
+            this.tabPageProduct.Location = new System.Drawing.Point(4, 29);
+            this.tabPageProduct.Name = "tabPageProduct";
+            this.tabPageProduct.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageProduct.TabIndex = 4;
+            this.tabPageProduct.Text = "Product";
+            this.tabPageProduct.UseVisualStyleBackColor = true;
+            // 
+            // tabPageDealer
+            // 
+            this.tabPageDealer.Location = new System.Drawing.Point(4, 29);
+            this.tabPageDealer.Name = "tabPageDealer";
+            this.tabPageDealer.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageDealer.TabIndex = 5;
+            this.tabPageDealer.Text = "Dealer";
+            this.tabPageDealer.UseVisualStyleBackColor = true;
+            // 
+            // tabPageECommerce
+            // 
+            this.tabPageECommerce.Location = new System.Drawing.Point(4, 29);
+            this.tabPageECommerce.Name = "tabPageECommerce";
+            this.tabPageECommerce.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageECommerce.TabIndex = 6;
+            this.tabPageECommerce.Text = "eCommerce";
+            this.tabPageECommerce.UseVisualStyleBackColor = true;
+            // 
+            // tabPageNews
+            // 
+            this.tabPageNews.Location = new System.Drawing.Point(4, 29);
+            this.tabPageNews.Name = "tabPageNews";
+            this.tabPageNews.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageNews.TabIndex = 7;
+            this.tabPageNews.Text = "News";
+            this.tabPageNews.UseVisualStyleBackColor = true;
+            // 
+            // tabPageVideo
+            // 
+            this.tabPageVideo.Location = new System.Drawing.Point(4, 29);
+            this.tabPageVideo.Name = "tabPageVideo";
+            this.tabPageVideo.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageVideo.TabIndex = 8;
+            this.tabPageVideo.Text = "Video";
+            this.tabPageVideo.UseVisualStyleBackColor = true;
+            // 
+            // tabPageTeaser
+            // 
+            this.tabPageTeaser.Location = new System.Drawing.Point(4, 29);
+            this.tabPageTeaser.Name = "tabPageTeaser";
+            this.tabPageTeaser.Size = new System.Drawing.Size(1364, 733);
+            this.tabPageTeaser.TabIndex = 9;
+            this.tabPageTeaser.Text = "Teaser";
+            this.tabPageTeaser.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +647,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "NJDQEI App Content Management System";
+            this.Text = "NACMS - NJDQEI App Content Management System";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.AppTab.ResumeLayout(false);
             this.tabPageCountry.ResumeLayout(false);
@@ -427,6 +657,10 @@
             this.tabPageHotline.ResumeLayout(false);
             this.tabPageHotline.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPageBrand.ResumeLayout(false);
+            this.tabPageBrand.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.brandImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -453,8 +687,6 @@
         private System.Windows.Forms.TextBox hotlineEmail;
         private System.Windows.Forms.TextBox hotlinePhone;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox hotlineFax;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRefreshHotline;
         private System.Windows.Forms.Button btnSaveHotline;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -472,6 +704,28 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusDateTime;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripItemDelete;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDelete;
+        private System.Windows.Forms.TabPage tabPageBrand;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox BrandComboBoxHotline;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox brandSortRank;
+        private System.Windows.Forms.TextBox brandname;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox brandImage;
+        private System.Windows.Forms.TextBox branddescription;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BrandBtnSave;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TabPage tabPageType;
+        private System.Windows.Forms.TabPage tabPageProduct;
+        private System.Windows.Forms.TabPage tabPageDealer;
+        private System.Windows.Forms.TabPage tabPageECommerce;
+        private System.Windows.Forms.TabPage tabPageNews;
+        private System.Windows.Forms.TabPage tabPageVideo;
+        private System.Windows.Forms.TabPage tabPageTeaser;
     }
 }
 

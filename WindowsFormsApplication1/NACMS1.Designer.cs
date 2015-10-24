@@ -81,6 +81,16 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=767,Y=17}.
+        /// </summary>
+        public static System.Drawing.Point openFileDialog1_TrayLocation {
+            get {
+                object obj = ResourceManager.GetObject("openFileDialog1.TrayLocation", resourceCulture);
+                return ((System.Drawing.Point)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Point ähnlich wie {X=442,Y=17}.
         /// </summary>
         public static System.Drawing.Point statusStrip1_TrayLocation {
